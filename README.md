@@ -1,20 +1,20 @@
-# vue-lupus-slider
-Vue slider component.
+# vue-lupus-paragraph-image
+Vue image paragraph component.
 
 
 
 ## Install
 
 via npm:
-`npm install https://github.com/drunomics/vue-lupus-paragraph-text.git`
+`npm install https://github.com/drunomics/vue-lupus-paragraph-image.git`
 
 
 import it:
 
 ```
-import { PgMedia } from 'vue-lupus-paragraph-media';
+import { PgImage } from 'vue-lupus-paragraph-image';
 
-Vue.component('pg-media', PgMedia);
+Vue.component('pg-image', PgImage);
 ```
 ## Options
 You can pass options via props:
@@ -22,7 +22,7 @@ You can pass options via props:
 ```
 <pg-media
   type="{{ type }}"
-  data-img-src
+  data-img-src="/path/to/image"
 >
 ```
 

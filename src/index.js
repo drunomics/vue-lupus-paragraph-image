@@ -1,3 +1,3 @@
-import PgMedia from './pg-media.vue';
+import PgImage from './pg-image.vue';
 
-export { PgMedia };
+export { PgImage };

@@ -2,7 +2,7 @@
   <div :class="paragraphClass">
     <slot
       v-if="isImage"
-      name="image">
+      name="field_image">
       <img
         :src="dataImgSrc"
         class="paragraph__image">
@@ -12,9 +12,9 @@
 </template>
 <script>
   export default {
-    name: 'PgMedia',
+    name: 'PgImage',
     props: {
-      type: { type: String, default: () => '' },
+      type: { type: String, default: () => 'image' },
       dataImgSrc: { type: String, default: () => '' },
     },
     computed: {
@@ -22,7 +22,7 @@
         return this.type === 'image';
       },
       paragraphClass() {
-        return `paragraph paragraph--${this.type} paragraph--media`;
+        return `paragraph paragraph--${this.type}`;
       },
     },
   };
