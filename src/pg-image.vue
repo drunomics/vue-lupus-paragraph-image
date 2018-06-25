@@ -3,9 +3,18 @@
     <slot
       v-if="isImage"
       name="field_image">
-      <img
-        :src="dataImgSrc"
-        class="paragraph__image">
+      <div class="paragraph-image__wrapper">
+        <img
+          :src="dataImgSrc"
+          class="paragraph-image__image"
+        >
+        <div class="paragraph-image__copyright">
+          {{ fieldCopyright }}
+        </div>
+        <div class="paragraph-image__caption">
+          {{ fieldCaption }}
+        </div>
+      </div>
     </slot>
     <slot/>
   </div>
@@ -16,6 +25,8 @@
     props: {
       type: { type: String, default: () => 'image' },
       dataImgSrc: { type: String, default: () => '' },
+      fieldCopyright: { type: String, default: () => '' },
+      fieldCaption: { type: String, default: () => '' },
     },
     computed: {
       isImage() {

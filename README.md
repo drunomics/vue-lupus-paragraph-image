@@ -20,14 +20,20 @@ Vue.component('pg-image', PgImage);
 You can pass options via props:
 
 ```
-<pg-media
-  type="{{ type }}"
+<pg-image
+  type="image"
   data-img-src="/path/to/image"
+  field-copyright="(c)drunomics GmbH"
+  field-caption="Beautiful image!"
 >
 ```
 
 - `type` ( string )
   Type of media. Allowed values:
   - `image`
-- `imgSrc` ( string )
+- `data-img-source` ( string )
   Image source.
+- `field-copyright` ( string )
+  The image's copyright
+- `field-caption` ( string )
+  The image's caption
