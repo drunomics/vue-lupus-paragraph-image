@@ -16,17 +16,9 @@ import { PgImage } from 'vue-lupus-paragraph-image';
 
 Vue.component('pg-image', PgImage);
 ```
-## Options
-You can pass options via props:
 
-```
-<pg-image
-  type="image"
-  data-img-src="/path/to/image"
-  field-copyright="(c)drunomics GmbH"
-  field-caption="Beautiful image!"
->
-```
+## Properties
+You can pass the following props:
 
 - `type` ( string )
   Type of media. Allowed values:
@@ -34,6 +26,15 @@ You can pass options via props:
 - `data-img-source` ( string )
   Image source.
 - `field-copyright` ( string )
-  The image's copyright
+  The image's copyright.
 - `field-caption` ( string )
-  The image's caption
+  The image's caption.
+
+## Example
+```
+<pg-image
+  data-img-src="/path/to/image"
+  field-copyright="(c)drunomics GmbH"
+  field-caption="Beautiful image!"
+>
+```
