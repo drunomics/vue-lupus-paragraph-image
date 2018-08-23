@@ -19,22 +19,18 @@ Vue.component('pg-image', PgImage);
 
 ## Properties
 You can pass the following props:
-
-- `type` ( string )
-  Type of media. Allowed values:
-  - `image`
 - `data-img-source` ( string )
   Image source.
-- `field-copyright` ( string )
+- `data-field-copyright` ( string )
   The image's copyright.
-- `field-caption` ( string )
+- `data-field-caption` ( string )
   The image's caption.
 
 ## Example
 ```
 <pg-image
   data-img-src="/path/to/image"
-  field-copyright="(c)drunomics GmbH"
-  field-caption="Beautiful image!"
+  data-field-copyright="(c)drunomics GmbH"
+  data-field-caption="Beautiful image!"
 >
 ```

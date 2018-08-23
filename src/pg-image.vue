@@ -12,16 +12,15 @@
         class="paragraph-image__copyright"
         v-if="hasCopyright"
       >
-        {{ fieldCopyright }}
+        {{ dataFieldCopyright }}
       </div>
       <div
         class="paragraph-image__caption"
         v-if="hasCaption"
       >
-        {{ fieldCaption }}
+        {{ dataFieldCaption }}
       </div>
     </div>
-    <slot/>
   </div>
 </template>
 <script>
@@ -29,15 +28,15 @@
     name: 'PgImage',
     props: {
       dataImgSrc: { type: String, default: () => '' },
-      fieldCopyright: { type: String, default: () => '' },
-      fieldCaption: { type: String, default: () => '' },
+      dataFieldCopyright: { type: String, default: () => '' },
+      dataFieldCaption: { type: String, default: () => '' },
     },
     computed: {
       hasCopyright() {
-        return this.fieldCopyright !== '';
+        return this.dataFieldCopyright !== '';
       },
       hasCaption() {
-        return this.fieldCaption !== '';
+        return this.dataFieldCaption !== '';
       },
       hasImage() {
         return this.dataImgSrc !== '';
