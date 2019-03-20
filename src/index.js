@@ -1,3 +1,5 @@
-import PgImage from './pg-image.vue';
+import PgImage from './pg-image.vue'
 
-export { PgImage };
+export { PgImage }
+
+export default PgImage
