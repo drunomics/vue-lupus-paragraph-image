@@ -4,9 +4,11 @@
       <slot :name="$slots.image ? 'image': 'default'" />
       <div
         v-if="$slots.caption"
-        class="caption"
+        class="caption-wrapper"
       >
-        <slot name="caption" />
+        <div class="caption">
+          <slot name="caption" />
+        </div>
       </div>
     </div>
     <div
