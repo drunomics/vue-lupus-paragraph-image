@@ -1,46 +1,26 @@
 <template>
   <div class="paragraph paragraph--image">
+    <div class="image">
+      <slot :name="$slots.image ? 'image': 'default'" />
+      <div
+        v-if="$slots.caption"
+        class="caption-wrapper"
+      >
+        <div class="caption">
+          <slot name="caption" />
+        </div>
+      </div>
+    </div>
     <div
-      class="paragraph-image__wrapper"
-      v-if="hasImage"
+      v-if="$slots.copyright"
+      class="copyright"
     >
-      <img
-        :src="dataImgSrc"
-        class="paragraph-image__image"
-      >
-      <div
-        class="paragraph-image__copyright"
-        v-if="hasCopyright"
-      >
-        {{ dataFieldCopyright }}
-      </div>
-      <div
-        class="paragraph-image__caption"
-        v-if="hasCaption"
-      >
-        {{ dataFieldCaption }}
-      </div>
+      <slot name="copyright" />
     </div>
   </div>
 </template>
 <script>
-  export default {
-    name: 'PgImage',
-    props: {
-      dataImgSrc: { type: String, default: () => '' },
-      dataFieldCopyright: { type: String, default: () => '' },
-      dataFieldCaption: { type: String, default: () => '' },
-    },
-    computed: {
-      hasCopyright() {
-        return this.dataFieldCopyright !== '';
-      },
-      hasCaption() {
-        return this.dataFieldCaption !== '';
-      },
-      hasImage() {
-        return this.dataImgSrc !== '';
-      },
-    }
-  };
+export default {
+  name: 'PgImage'
+}
 </script>

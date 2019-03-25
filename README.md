@@ -1,8 +1,6 @@
 # vue-lupus-paragraph-image
 Vue image paragraph component.
 
-
-
 ## Install
 
 via npm:
@@ -12,25 +10,32 @@ via npm:
 import it:
 
 ```
-import { PgImage } from 'vue-lupus-paragraph-image';
+import PgImage from 'vue-lupus-paragraph-image';
 
 Vue.component('pg-image', PgImage);
 ```
 
-## Properties
-You can pass the following props:
-- `data-img-source` ( string )
-  Image source.
-- `data-field-copyright` ( string )
-  The image's copyright.
-- `data-field-caption` ( string )
-  The image's caption.
+## Slots
+You can use the following slots
+
+- `image` ( default )
+  Should contain a <lupus-image>
+- `caption` ( optional )
+  Image caption.
+- `copyright` ( optional )
+  Image copyright.
 
 ## Example
 ```
-<pg-image
-  data-img-src="/path/to/image"
-  data-field-copyright="(c)drunomics GmbH"
-  data-field-caption="Beautiful image!"
->
+<pg-image>
+  <lupus-image
+    width="200" height="300"
+    :src="..."
+    slot="image"
+  >
+    <img :src="...">
+  </lupus-image>
+  <span slot="copyright">Lorem Ipsum.</span>
+  <span slot="caption">Lorem Ipsum.</span>
+</pg-image>
 ```
