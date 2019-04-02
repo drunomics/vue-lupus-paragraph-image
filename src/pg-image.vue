@@ -3,19 +3,19 @@
     <div class="image">
       <slot :name="$slots.image ? 'image': 'default'" />
       <div
-        v-if="$slots.caption"
-        class="caption-wrapper"
+        v-if="$slots.copyright"
+        class="copyright-wrapper"
       >
-        <div class="caption">
-          <slot name="caption" />
+        <div class="copyright">
+          <slot name="copyright" />
         </div>
       </div>
     </div>
     <div
-      v-if="$slots.copyright"
-      class="copyright"
+      v-if="$slots.caption"
+      class="caption"
     >
-      <slot name="copyright" />
+      <slot name="caption" />
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 {
   "name": "@drunomics/vue-lupus-paragraph-image",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vue paragraph image",
   "main": "dist/vue-lupus-paragraph-image.umd.min.js",
   "scripts": {
